@@ -1,0 +1,91 @@
+Nessa primeira atividade vocês deverão desenvolver um algoritmo em VisualG, ou na linguagem de sua preferência, que faça:
+O programa deverá receber um valor de quantidade qualquer informada pelo usuário de livros que ele quer comprar. Ou seja, eu criarei uma variável que receberá esse valor informado pelo usuário.
+Logo após o valor ser armazenado em uma variável, eu trabalharei com ele, da seguinte forma:
+Eu utilizarei a quantidade informada para multiplicar com o valor de cada critério, ou seja, eu farei a seguinte conta:
+
+- (valor por livro * a quantidade informada pelo usuário) + o valor fixo.
+
+
+Ou seja, para cada critério eu colocarei a quantidade informada, respeitando também a ordem de operações dos valores, pois se eu deixar os valores fora do parênteses o resultado da minha conta será diferente, lembrando o computador lê o código de maneira linear, ou seja, ele lê linha por linha da esquerda para direita, voltando a nossa lógica, ficando da seguinte forma:
+
+Critério A: (0,25* valor informado pelo usuário) + 7,50;
+Critério B: (0,50* valor informado pelo usuário) + 2,50;
+Critério C: (0,65* valor informado pelo usuário) + 1,50;
+
+Eu armazenarei os valores de cada conta em outras variáveis, para que assim eu possa trabalhar com o valor delas.
+Após realizada as contas e obtidos os resultados, eu trabalharei com os resultados de cada critério.
+Verificarei, qual dos critérios é melhor para o cliente/usuário.
+Para isso eu farei os seguintes testes lógicos:
+
+O 1º teste lógico:
+
+O resultado obtido em qualquer um dos critérios é igual a outro?
+
+Para isso eu pegarei os resultados obtidos em cada um dos critérios e verificarei:
+
+O valor obtido no critério A é igual ao valor do critério B ?
+Caso positivo, desconsidere os critérios A e B e mostre o critério C como o melhor critério para o cliente.
+Caso negativo, verificarei com outro critério.
+
+
+
+
+O valor obtido no critério A é igual ao valor do critério C ?
+Caso positivo, desconsidere os critérios A e C e mostre o critério B como o melhor critério para o cliente.
+Caso negativo, verificarei com outro critério.
+
+
+
+
+O valor obtido no critério B é igual ao valor do critério C ?
+Caso positivo, desconsidere os critérios B e C e mostre o critério A como o melhor critério para o cliente.
+Caso negativo, verificarei com outro critério.
+
+
+
+
+Porém, caso não haja nenhuma ocorrência de valores iguais eu realizarei o seguinte teste:
+
+Ou seja, um "senão" houver valores iguais para nenhum dos critérios mostrados faça o seguinte teste lógico:
+
+
+
+
+O 2º teste lógico:
+
+O resultado obtido em qualquer um dos critérios é MAIOR que os outros?
+Para isso eu pegarei os resultados obtidos em cada um dos critérios e verificarei:
+
+
+O valor obtido no critério A é maior que no critério B E critério C?
+Caso positivo, mostre o valor obtido nesse critério para o usuário.
+Caso negativo, verificarei com outro critério.
+
+
+O valor obtido no critério B é maior que no critério C E critério A?
+Caso positivo, mostre o valor obtido nesse critério para o usuário.
+Caso negativo, verificarei com outro critério.
+
+
+O valor obtido no critério C é maior que no critério A E critério B?
+Caso positivo, mostre o valor obtido nesse critério para o usuário.
+Caso negativo, verificarei com outro critério.
+
+Em outras palavras, o critério que será melhor para o ususário será o valor que não seja igual OU  que seja o maior valor obtido.
+
+Agora que destrinchamos e explicamos melhor a atividade, vamos transformar a abstração em linguagem de código.
+
+
+(ENUNCIADO ATUALIZADO)
+Um site de e-commerce de livros está fazendo uma promoção para pagamento no boleto, à vista.
+No qual, o cliente irá apenas informar a quantidade de livros que deseja comprar.
+Após informada a quantidade livros o programa irá calcular, de maneira automática, o valor do desconto obtido desse cliente.
+Para calcular esse valor do desconto o programa seguirá os seguintes critérios:
+
+Critério A: R$ 0,25 por livro + R$ 7,50 fixo;
+Critério B: R$ 0,50 por livro + R$ 2,50 fixo;
+Critério C: R$ 0,65 por livro + R$ 1,50 fixo;
+
+Caso haja critérios com o mesmo valor. O programa irá desconsiderar os critérios de mesmo valor e selecionar o valor diferente.
+Caso não haja critérios com mesmo valor. O programa irá selecionar o maior valor.
+Ao final, o programa irá exibir para o cliente qual foi o critério e o valor do desconto que obteve.

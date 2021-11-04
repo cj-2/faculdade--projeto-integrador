@@ -1,0 +1,68 @@
+Nessa segunda atividade vocês deverão desenvolver um algoritmo em VisualG, ou na linguagem de sua preferência, que faça:
+Eu criarei um programa, no qual, receba uma quantidade indeterminada de usuário, nos quais, informarão a idade e o programa verificará se o usuário tem que votar obrigatoriamente, facultativamente, ou não, tudo isso respeitando os critérios solicitados.
+
+
+Para que nós faremos o programa repetir "infinitas vezes", pois não tenho a quantidade de repetições determinadas ou de informações a serem cadastradas. 
+Eu farei uma pergunta toda vez que realizar um cadastro, quando for a primeira vez do programa receber um dado, eu criarei uma variável de controle de cadastro, 
+que somente se encarregará disso e sempre perguntarei se o usuário deseja cadastrar um novo usuário no programa. 
+Ou seja, enquanto o usuário quiser cadastrar novos usuários no programa eu deixarei a minha variável de controle com um valor 
+que indique que programa está aceitando cadastros, caso o usuário não queira mais cadastrar eu mudarei o valor dessa variável de controle para um outro valor. 
+Algo parecido com esse exemplo:
+
+//Primeira entrada dos dados
+//Código
+escreva "você deseja cadastrar algum usuário? digite 1-sim 2-não"
+leia controle
+enquanto (controle = 1) repita //caso o usuário escolha 1
+código que será explicado em seguida
+//ao final desse bloco de repetição eu perguntarei novamente
+escreva "você deseja cadastrar algum usuário? digite 1-sim 2-não"
+leia controle
+//caso a resposta seja não eu mostrarei a resposta referente a quantidade de usuário cadastrados conforme solicitado.
+
+Após resolvido o problema da repetição, eu farei agora a verificação da quantidade de usuários de cada idade.
+Para fazer isso eu precisarei de duas variáveis. Uma para armazenar a idade cadastrada e a outra para somar a quantidade de usuários com essa idade que seguem o critério.
+
+
+Como assim?
+Da seguinte maneira:
+
+
+Ao cadastrar a idade, o programa armazenará essa idade em uma variável. Após cadastrada eu verificarei essa idade na variável.
+Seguindo os critérios apresentados:
+
+
+SE a idade cadastrada for maior ou igual a 18 (>=18) E menor ou igual a 69 (<=69) eu somarei mais 1 (+1) a uma outra variável de controle de quantidades para esse critério.
+
+
+Essa lógica se aplicará aos demais critérios.
+Ou seja, segue aqui um exemplo:
+
+
+//exemplo para eu aplicar os critérios
+escreva "digite a sua idade"
+leia idade
+SE (idade>=18 E idade<=69)
+(Variável de soma para obrigatórios) +1// isso fará com que essa variável, sempre que os critérios (SE) forem aceitos, soma +1 para esse critério, em outras palavras, eu coloco +1 nessa minha variável de soma.
+SE (idade=16 OU idade=17 OU idade>=70)
+(Variável de soma para facultativos) +1// isso fará com que essa variável, sempre que os critérios (SE) forem aceitos, soma +1 para esse critério, em outras palavras, eu coloco +1 nessa minha variável de soma.
+SE (idade<16)
+(Variável de soma para não eleitor) +1// isso fará com que essa variável, sempre que o critério (SE) for aceito soma +1 para esse critério, em outras palavras, eu coloco +1 nessa minha variável de soma.
+
+
+Ou seja, sempre que o for atendido um dos critérios eu somarei mais 1 (+1) nas minhas variáveis de soma.
+
+Feito o cadastrado de todas as idades eu agora somarei essas váriaveis de soma de cada critério para que eu descubra quantos moradores há na cidade.
+
+Ficando algo parecido com esse exemplo:
+
+(Variável responsável pelo total de moradores) = (Variável de soma para obrigatórios) + (Variável de soma para facultativos) + (Variável de soma para não eleitor)
+
+Feito todas as operações, eu  apenas apresentarei o resultado das somas ao meu usuário, por exemplo:
+
+escreva "no município há " + (Variável responsável pelo total de moradores) + " de cidadãos"
+escreva "no município há " + (Variável de soma para obrigatórios) + " de cidadãos no qual o voto é obrigatório"
+escreva "no município há " + (Variável de soma para facultativo) + " de cidadãos no qual o voto é facultativo"
+escreva "no município há " + (Variável de soma para não eleitor) + " de cidadãos no qual não são eleitores"
+
+Agora que destrinchamos e explicamos melhor a atividade, vamos transformar a abstração em linguagem de código.

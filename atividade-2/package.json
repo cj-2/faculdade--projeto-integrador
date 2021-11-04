@@ -1,0 +1,12 @@
+{
+  "name": "atividade-1",
+  "version": "1.0.0",
+  "description": "Trabalho da faculdade.",
+  "main": "index.js",
+  "author": "Carlos Roberto",
+  "license": "MIT",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js --verbose"
+  }
+}
